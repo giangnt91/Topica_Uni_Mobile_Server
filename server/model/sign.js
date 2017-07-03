@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 // connect to mongodb
-mongoose.connect('mongodb://localhost:27017/Topica_Uni');
+mongoose.connect('mongodb://192.168.99.100:27017/Topica_Uni');
 
 // create user
 var _user_test = new mongoose.Schema({

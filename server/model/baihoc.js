@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 // connect to mongodb
-mongoose.createConnection('mongodb://localhost:27017/Topica_Uni');
+mongoose.createConnection('mongodb://192.168.99.100:27017/Topica_Uni');
 
 // get all mon hoc
 var _bai_hoc = new mongoose.Schema({
