@@ -45,6 +45,20 @@ module.exports = {
             res.status(200).json(response);
         });
     },
+    Get_detail_by_id: function(req, res){
+        _monhoc_model.find({Id_subject: req.body.Id_subject}, function(err, data){
+            if (err) {
+                response = { 'error': true, 'message': 'error fetching data' };
+            } else {
+                if (data.length > 0) {
+                    response = { 'error': false, 'monhoc': data };
+                } else {
+                    response = { 'error': true, 'message': 'Id subject incorrect' };
+                } 
+            }
+            res.status(200).json(response);
+        });
+    },
     Get_by_id_nganh: function(req, res){
         _monhoc_model.find({Id_nganh: req.body.Id_nganh}, function(err, data){
             if (err) {
